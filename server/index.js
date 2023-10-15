@@ -44,7 +44,7 @@ mongoose.connect(process.env.MONGO_URL,{
      /** ONLY ADD DATA ONE TIME  */
      //OverallStat.insertMany(dataOverallStat);
     //  Product.insertMany(dataProduct)
-    //  ProductStat.insertMany(dataProductStat)
+    // ProductStat.insertMany(dataProductStat)
     // User.insertMany(dataUser)
     // Transaction.insertMany(dataTransaction)
 })

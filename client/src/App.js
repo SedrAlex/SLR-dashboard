@@ -11,6 +11,7 @@ import Customers from "scenes/Customers/Customers"
 import Transactions from "scenes/Transactions/Transactions";
 import Geography from "scenes/Geography/Geography";
 import Overview from "scenes/Overview/Overview";
+import Daily from "scenes/Daily/Daily";
 
 function App() {
 const mode = useSelector((state) => state.global.mode)
@@ -29,6 +30,7 @@ const theme = useMemo(() => createTheme(themeSettings(mode)),[mode])
           <Route path="/transactions" element={<Transactions />} />
           <Route path="/geography" element={<Geography />} />
           <Route path="/overview" element={<Overview />} />
+          <Route path="/daily" element={<Daily />} />
 
 
           </Route>
