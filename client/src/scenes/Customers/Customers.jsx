@@ -3,10 +3,11 @@ import { DataGrid } from "@mui/x-data-grid";
 import Header from "components/Header";
 import React from "react";
 import { useGetCustomersQuery } from "state/api";
+import { dataUser } from "./CustomerData";
 
 const Customers = () => {
   const theme = useTheme();
-  const { data, isLoading } = useGetCustomersQuery();
+  // const { data, isLoading } = useGetCustomersQuery();
 
   const columns = [
     {
@@ -75,14 +76,14 @@ const Customers = () => {
             borderTop: "none",
           },
           "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
-           color:`${theme.palette.secondary[200]} !important`,
-          }
+            color: `${theme.palette.secondary[200]} !important`,
+          },
         }}
       >
         <DataGrid
-          loading={isLoading || !data}
+          // loading={isLoading || !data}
           getRowId={(row) => row._id}
-          rows={data || []}
+          rows={dataUser || []}
           columns={columns}
         />
       </Box>
